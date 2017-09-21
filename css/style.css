@@ -1,3 +1,40 @@
 * {
 	box-sizing: border-box;
 }
+
+/* TRON font */
+@font-face {
+	font-family: Tron;
+	src: url(../assets/fonts/TRON.TTF);
+}
+
+/* 
+COLORS:
+	Black (backgrounds) #0C141F
+	light Blue (text) #6FC3DF
+	yellow #FFE64D
+	orange #DF740C
+	white #E6FFFF
+*/
+
+
+header {
+	display: flex;
+	background-color: #0c141f;
+	min-height: 8em;
+	width: 100%;
+	justify-content: center;
+	border-bottom: 5px solid #DF740C;
+}
+
+.main-title {
+	font-family: Tron;
+	font-size: 5em;
+	color: #6fc3df;
+	align-self: center;
+}
+
+.gameboard {
+	background-color: #0c141f;
+	height: 70vh;
+}
