@@ -16,7 +16,8 @@ console.log("start app.js");
 	link to youtube for music
 */
 
-let playing = true;
+let playing = false;
+let gameStart = false;
 
 // GAME PLAY CODE //
 
@@ -80,11 +81,20 @@ let player2 = new Player('trail-2', 'l');
 // let game = new Game(player1, player2);
 // Game has listener, playing, gameOver and movePlayers
 
-document.addEventListener('keydown', movePlayers);
+document.addEventListener('keydown', userInputs);
 
-function movePlayers(event){ // move players when their key is pressed
+function userInputs(event){ // move players when their key is pressed
 	player1.playerMove(event.key);
 	player2.playerMove(event.key);
+	// Start game
+	if (event.key === " " && !gameStart && !playing){
+		playing = true;
+		//.start-page=>none .player-area=>flex
+		document.querySelectorAll('.start-page')[0].style.display = "none";
+		[].forEach.call(document.querySelectorAll('.player-area'), function(el){
+			el.style.display = 'flex';
+		});
+	}
 }
 
 function gameOver(name){
