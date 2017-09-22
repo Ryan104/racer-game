@@ -46,13 +46,13 @@ Methods:
 */
 
 class Player {
-	constructor(id){
+	constructor(id, moveKey){
 		// select DOM element and initialize its height
+		console.log(moveKey);
 		this.element = document.getElementById(id);
+		this.moveKey = moveKey;
 		this.height = 5;
 		this.setPxHeight(this.height);
-
-		//initialize click listener for element
 	}
 
 	setPxHeight(heightInt){
@@ -60,15 +60,38 @@ class Player {
 		this.element.style.height = heightInt + 'px';
 	}
 
-	increaseHeight(incriment=1){
+	increaseHeight(incriment=10){
 		// increase the player height
 		if (playing){
 			this.height += incriment;
 			this.setPxHeight(this.height);
 		}
 	}
+
+	playerMove(whatKey){
+		if (whatKey == this.moveKey){
+			console.log('player key pressed');
+			this.increaseHeight();
+		}
+	}
 }
 
 
-let player1 = new Player('trail-1');
-player1.increaseHeight(200);
+let player1 = new Player('trail-1', 'a');
+let player2 = new Player('trail-2', 'l');
+
+// let game = new Game(player1, player2);
+// Game has listener, playing, and movePlayers
+
+document.addEventListener('keydown', movePlayers);
+
+function movePlayers(event){
+	console.log(event.key);
+	player1.playerMove(event.key);
+	player2.playerMove(event.key);
+}
+
+
+
+
+
