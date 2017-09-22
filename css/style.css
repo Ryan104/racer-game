@@ -17,6 +17,7 @@ COLORS:
 	white #E6FFFF
 */
 
+/* ---- Header Styles ----- */
 
 header {
 	display: flex;
@@ -34,7 +35,80 @@ header {
 	align-self: center;
 }
 
-.gameboard {
+/* ---- Game area styles ---- */
+
+.main-area {
+	padding: 20px 0;
 	background-color: #0c141f;
-	height: 70vh;
 }
+
+.play-area {
+	margin: 0 auto;
+	display: flex;
+	height: 400px;
+	width: 300px;
+	border: 1px solid #e6ffff;
+}
+
+.player-area {
+	/* the flexbox sets the initial position of the players */
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center;
+	flex: 1;
+
+	height: 100%; /* fill the play area */
+	border: 1px dashed #FFE64D; /* Just to see it - remove later */
+}
+
+.bike {
+	display: flex; /* using flex to center rider */
+	justify-content: center;
+	align-items: center;
+
+	position: relative; /* Relative positioning pulls player out of document flow */
+	bottom: 0; 
+
+	/* Set the size of the players */
+	height: 30px;
+	width: 10px;
+	border-radius: 3px;
+}
+
+.rider {
+	height: 16px;
+	width: 4px;
+	background-color: #000;
+}
+
+.player-1 {
+	background-color: #6fc3df; /* BLUE */
+}
+
+.player-2 {
+	background-color: #df740c; /* ORANGE */
+}
+
+.light-trail {
+	position: relative;
+	width: 5px;
+	background-color: #E6FFFF;
+	margin-top: 3px;
+}
+
+.trail-1 {
+	/* Modifying height will control the players position on the screen */
+	height: 10px;
+}
+
+.trail-2 {
+	/* Modifying height will control the players position on the screen */
+	height: 10px;
+}
+
+
+/* ---- Footer/Controls area styles ---- */
+
+
+
