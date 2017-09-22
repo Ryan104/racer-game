@@ -67,6 +67,10 @@ h2 {
 	font-size: 1.5em;
 }
 
+p {
+	margin: 10px 0;
+}
+
 .start-page h2 {
 	margin: 20px 0;
 	padding: 10px 0;
@@ -135,5 +139,19 @@ h2 {
 
 /* ---- Footer/Controls area styles ---- */
 
+.controls {
+	background-color: #0c141f;
+	color: #e6ffff;
+	border-top: 5px solid #df740c;
+	padding: 20px;
+}
+
+.instructions .blue {
+	color: #6fc3df;
+}
+
+.instructions .orange {
+	color: #ffe64d;
+}
 
 
