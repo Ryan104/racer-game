@@ -1,9 +1,9 @@
 console.log("start app.js");
-
+//TODO: use style guide
 // START PAGE CODE //
 
 /*
--I can press space to start the game
+-TODO: I can press space to start the game
 	-display:none on .start-page
 	-display: flex on .player-area
 
@@ -21,11 +21,6 @@ let playing = true;
 // GAME PLAY CODE //
 
 /*
--I can press a button and the player will advance
--I can press another button and player two will advance
-
--The game will end when a player reaches the end
-
 -A message will display the winning player
 
 
@@ -83,7 +78,7 @@ let player1 = new Player('trail-1', 'a');
 let player2 = new Player('trail-2', 'l');
 
 // let game = new Game(player1, player2);
-// Game has listener, playing, and movePlayers
+// Game has listener, playing, gameOver and movePlayers
 
 document.addEventListener('keydown', movePlayers);
 
@@ -94,10 +89,6 @@ function movePlayers(event){ // move players when their key is pressed
 
 function gameOver(name){
 	playing = false;
+	// TODO: display winner to players
 	console.log(name + " wins!");
 }
-
-
-
-
-
