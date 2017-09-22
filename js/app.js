@@ -99,7 +99,14 @@ function userInputs(event){ // move players when their key is pressed
 
 function gameOver(name){
 	playing = false;
+	let winMessage = document.querySelectorAll('.win-message')[0];
 	// TODO: display winner to players
 	console.log(name + " wins!");
-	document.querySelectorAll('.win-message')[0].style.display = 'block';
+	winMessage.style.display = 'block';
+	if (name === "Player 1"){
+		winMessage.innerHTML = '<p class="blue">Player 1 Wins</p>';
+	} else if (name === 'Player 2'){
+		winMessage.innerHTML = '<p class="orange">Player 2 Wins</p>';
+	}
+	
 }
