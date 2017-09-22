@@ -84,7 +84,6 @@ h2 {
 	flex: 1;
 
 	height: 100%; /* fill the play area */
-	border: 1px dashed #FFE64D; /* Just to see it - remove later */
 }
 
 .bike {
@@ -118,18 +117,19 @@ h2 {
 .light-trail {
 	position: relative;
 	width: 5px;
-	background-color: #E6FFFF;
 	margin-top: 3px;
 }
 
 #trail-1 {
 	/* Modifying height will control the players position on the screen */
 	height: 10px;
+	background-color: #e6ffff;
 }
 
 #trail-2 {
 	/* Modifying height will control the players position on the screen */
 	height: 10px;
+	background-color: #ffe64d;
 }
 
 

@@ -51,7 +51,7 @@ class Player {
 		this.name = "Player " + id[id.length -1];
 		this.element = document.getElementById(id);
 		this.moveKey = moveKey;
-		this.height = 5;
+		this.height = 0;
 		this.setPxHeight(this.height);
 	}
 
@@ -64,7 +64,7 @@ class Player {
 		// increase the player height
 		this.height += incriment;
 		this.setPxHeight(this.height);	
-			
+
 		// Check if height is enough to win
 		if (this.height > 360){
 			gameOver(this.name);
