@@ -146,11 +146,17 @@ p {
 	padding: 20px;
 }
 
+.controls p {
+	font-size: 0.8em;
+}
+
 .instructions .blue {
+	font-size: 1.6em;
 	color: #6fc3df;
 }
 
 .instructions .orange {
+	font-size: 1.6em;
 	color: #ffe64d;
 }
 
