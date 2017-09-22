@@ -20,6 +20,7 @@ COLORS:
 body {
 	color: #6fc3df;
 	font-family: Tron;
+	background-color: #0c141f;
 }
 
 /* ---- Header Styles ----- */
@@ -51,6 +52,7 @@ header {
 	height: 400px;
 	width: 300px;
 	border: 1px solid #e6ffff;
+	justify-content: center;
 }
 
 .start-page {
@@ -88,6 +90,12 @@ p {
 	flex: 1;
 
 	height: 100%; /* fill the play area */
+}
+
+.win-message {
+	margin-top: 100px;
+	position: absolute;
+	display: none;
 }
 
 .bike {

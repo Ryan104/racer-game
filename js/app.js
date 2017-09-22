@@ -101,4 +101,5 @@ function gameOver(name){
 	playing = false;
 	// TODO: display winner to players
 	console.log(name + " wins!");
+	document.querySelectorAll('.win-message')[0].style.display = 'block';
 }
