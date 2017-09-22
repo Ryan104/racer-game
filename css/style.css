@@ -17,6 +17,11 @@ COLORS:
 	white #E6FFFF
 */
 
+body {
+	color: #6fc3df;
+	font-family: Tron;
+}
+
 /* ---- Header Styles ----- */
 
 header {
@@ -29,9 +34,7 @@ header {
 }
 
 .main-title {
-	font-family: Tron;
 	font-size: 5em;
-	color: #6fc3df;
 	align-self: center;
 }
 
@@ -50,9 +53,31 @@ header {
 	border: 1px solid #e6ffff;
 }
 
+.start-page {
+	/* display: none; */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	flex: 1;
+}
+
+h2 {
+	font-size: 1.5em;
+}
+
+.start-page h2 {
+	margin: 20px 0;
+	padding: 10px 0;
+	border-top: 1px solid #6fc3df;
+	border-bottom: 1px solid #6fc3df;
+}
+
 .player-area {
 	/* the flexbox sets the initial position of the players */
-	display: flex;
+	/* display: flex; */
+	display: none;
 	flex-direction: column;
 	justify-content: flex-end;
 	align-items: center;
