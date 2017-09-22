@@ -48,7 +48,7 @@ Methods:
 class Player {
 	constructor(id, moveKey){
 		// select DOM element and initialize its height
-		console.log(moveKey);
+		this.name = "Player " + id[id.length -1];
 		this.element = document.getElementById(id);
 		this.moveKey = moveKey;
 		this.height = 5;
@@ -62,15 +62,17 @@ class Player {
 
 	increaseHeight(incriment=10){
 		// increase the player height
-		if (playing){
-			this.height += incriment;
-			this.setPxHeight(this.height);
+		this.height += incriment;
+		this.setPxHeight(this.height);	
+			
+		// Check if height is enough to win
+		if (this.height > 360){
+			gameOver(this.name);
 		}
 	}
 
 	playerMove(whatKey){
-		if (whatKey == this.moveKey){
-			console.log('player key pressed');
+		if (playing && whatKey == this.moveKey){
 			this.increaseHeight();
 		}
 	}
@@ -85,10 +87,14 @@ let player2 = new Player('trail-2', 'l');
 
 document.addEventListener('keydown', movePlayers);
 
-function movePlayers(event){
-	console.log(event.key);
+function movePlayers(event){ // move players when their key is pressed
 	player1.playerMove(event.key);
 	player2.playerMove(event.key);
+}
+
+function gameOver(name){
+	playing = false;
+	console.log(name + " wins!");
 }
 
 
